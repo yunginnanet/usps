@@ -10,6 +10,7 @@ require (
 
 retract (
 	v0.0.0-20240603082808-20232c5ffb07
+	v0.0.1
 )
 
 require nullprogram.com/x/rng v1.1.0 // indirect

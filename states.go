@@ -10,7 +10,7 @@ import (
 
 	"git.tcp.direct/kayos/common/squish"
 
-	"usps/internal/data"
+	"github.com/yunginnanet/usps/internal/data"
 )
 
 var allStates []State

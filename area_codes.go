@@ -9,7 +9,7 @@ import (
 	"git.tcp.direct/kayos/common/squish"
 	"github.com/google/shlex"
 
-	"usps/internal/data"
+	"github.com/yunginnanet/usps/internal/data"
 )
 
 const AreaCodeLength = 3
