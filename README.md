@@ -1,6 +1,6 @@
 # usps
 
-[![GoDoc](https://godoc.org/github.com/yunginnanet/usps?status.svg)](https://pkg.go.dev/github.com/yunginnanet/usps) [![codecov](https://codecov.io/gh/yunginnanet/usps/branch/main/graph/badge.svg)](https://codecov.io/gh/yunginnanet/usps)
+[![GoDoc](https://godoc.org/github.com/yunginnanet/usps?status.svg)](https://pkg.go.dev/github.com/yunginnanet/usps) [![codecov](https://codecov.io/gh/yunginnanet/usps/graph/badge.svg?token=YbAagRnkvt)](https://codecov.io/gh/yunginnanet/usps)
 
 #### package usps is a U.S (phone number|state|area|zip) code toolkit.
 
