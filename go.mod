@@ -1,4 +1,4 @@
-module usps
+module github.com/yunginnanet/usps
 
 go 1.22.3
 

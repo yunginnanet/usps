@@ -14,11 +14,9 @@ this should be used for ultra-fast assessment potentially pending further online
 
 ## simple example
 
-	import "github.com/yunginnanet/usps"
-
 	package main
 
-	import "usps"
+	import "github.com/yunginnanet/usps"
 
 	func main() {
 		entries, _ := usps.LookupCityAreaCodes("CHICAGO")
