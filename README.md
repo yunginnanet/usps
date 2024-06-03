@@ -21,20 +21,22 @@ data queries.
 
 ## simple example
 
-    package main
+```golang
+package main
 
-    import "github.com/yunginnanet/usps"
+import "github.com/yunginnanet/usps"
 
-    func main() {
-    	entries, _ := usps.LookupCityAreaCodes("CHICAGO")
-    	for _, entry := range entries {
-    		println(entry.City)
-    		println(entry.Code)
-    		println(entry.State)
-    		println(entry.Country)
-    		println(entry.Latitude, entry.Longitude)
-    	}
-    }
+func main() {
+entries, _ := usps.LookupCityAreaCodes("CHICAGO")
+for _, entry := range entries {
+	println(entry.City)
+	println(entry.Code)
+	println(entry.State)
+	println(entry.Country)
+	println(entry.Latitude, entry.Longitude)
+}
+}
+```
 
 ### output:
 
