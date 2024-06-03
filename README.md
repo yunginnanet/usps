@@ -1,7 +1,8 @@
 # usps
 
+[![GoDoc](https://godoc.org/github.com/yunginnanet/usps?status.svg)](https://pkg.go.dev/github.com/yunginnanet/usps)
+[![codecov](https://codecov.io/gh/yunginnanet/usps/graph/badge.svg?token=YbAagRnkvt)](https://codecov.io/gh/yunginnanet/usps)
 
-    [![GoDoc](https://godoc.org/github.com/yunginnanet/usps?status.svg)](https://pkg.go.dev/github.com/yunginnanet/usps) [![codecov](https://codecov.io/gh/yunginnanet/usps/graph/badge.svg?token=YbAagRnkvt)](https://codecov.io/gh/yunginnanet/usps)
 #### package usps is a U.S (phone number|state|area|zip) code toolkit.
 
 this toolkit is offline, and the datasets are mostly acquired from U.S.
@@ -20,11 +21,9 @@ data queries.
 
 ## simple example
 
-    import "github.com/yunginnanet/usps"
-
     package main
 
-    import "usps"
+    import "github.com/yunginnanet/usps"
 
     func main() {
     	entries, _ := usps.LookupCityAreaCodes("CHICAGO")
@@ -80,110 +79,114 @@ data queries.
     US
     +4.232558e+001 -8.784118e+001
 
-
 ```go
 const AreaCodeLength = 3
 ```
 
-#### func  ExtractZipCodesFromString
+#### func ExtractZipCodesFromString
 
 ```go
 func ExtractZipCodesFromString(s string) ([]string, bool)
 ```
 
-#### func  GetAreaCodeInt
+#### func GetAreaCodeInt
 
 ```go
 func GetAreaCodeInt(number string) int
 ```
+
 GetAreaCodeInt returns the area code of the given phone number or string as an
 int. If invalid, returns 0.
 
-#### func  GetCityZipStrings
+#### func GetCityZipStrings
 
 ```go
 func GetCityZipStrings(city string) []string
 ```
+
 GetCityZipStrings returns a slice of zip codes in string form associated with a
 city when given a city in string form. Data is loaded from the USPS dataset on
 first call and cached in memory.
 
-#### func  GetStateZipStrings
+#### func GetStateZipStrings
 
 ```go
 func GetStateZipStrings(state string) []string
 ```
+
 GetStateZipStrings returns a slice of zip codes in string form associated with a
 state when given a state in string form. Data is loaded from the USPS dataset on
 first call and cached in memory.
 
-#### func  InitAreaCodes
+#### func InitAreaCodes
 
 ```go
 func InitAreaCodes()
 ```
 
-#### func  InitStates
+#### func InitStates
 
 ```go
 func InitStates()
 ```
 
-#### func  InitZipCodes
+#### func InitZipCodes
 
 ```go
 func InitZipCodes()
 ```
 
-#### func  LongHand
+#### func LongHand
 
 ```go
 func LongHand(short string) string
 ```
 
-#### func  PhoneNumberAreaCode
+#### func PhoneNumberAreaCode
 
 ```go
 func PhoneNumberAreaCode(number string) string
 ```
+
 PhoneNumberAreaCode returns the area code of the given phone number. This
 function will return an empty string if the number is invalid or isn't a known
 USA area code.
 
-#### func  PhoneNumberCity
+#### func PhoneNumberCity
 
 ```go
 func PhoneNumberCity(number string) string
 ```
 
-#### func  PhoneNumberState
+#### func PhoneNumberState
 
 ```go
 func PhoneNumberState(number string) string
 ```
+
 PhoneNumberState returns the state that the given phone number is in. This is
 probably the most useful function in this package, and the one you're looking
 for. This function will return an empty string if the number is invalid.
 
-#### func  ShortHand
+#### func ShortHand
 
 ```go
 func ShortHand(long string) string
 ```
 
-#### func  StateListLong
+#### func StateListLong
 
 ```go
 func StateListLong() []string
 ```
 
-#### func  StateListShort
+#### func StateListShort
 
 ```go
 func StateListShort() []string
 ```
 
-#### func  StateToShort
+#### func StateToShort
 
 ```go
 func StateToShort(long string) string
@@ -200,27 +203,30 @@ type AreaCode struct {
 
 AreaCode is a struct representing an area code.
 
-#### func  LookupAreaCode
+#### func LookupAreaCode
 
 ```go
 func LookupAreaCode(code string) ([]*AreaCode, bool)
 ```
+
 LookupAreaCode returns a slice of AreaCode types that match the given area code.
 
-#### func  LookupCityAreaCodes
+#### func LookupCityAreaCodes
 
 ```go
 func LookupCityAreaCodes(city string) ([]*AreaCode, bool)
 ```
+
 LookupCityAreaCodes returns a slice of AreaCode types that match the given city.
 Note! This is not a perfect match. If a city is not found, it will attempt to
 find a city that contains the query..
 
-#### func  LookupStateAreaCodes
+#### func LookupStateAreaCodes
 
 ```go
 func LookupStateAreaCodes(state string) ([]*AreaCode, bool)
 ```
+
 LookupStateAreaCodes returns a slice of AreaCode types that match the given
 state.
 
@@ -233,7 +239,6 @@ type GeoPoint2D struct {
 }
 ```
 
-
 #### type State
 
 ```go
@@ -244,20 +249,19 @@ type State struct {
 }
 ```
 
-
-#### func  StateByLong
+#### func StateByLong
 
 ```go
 func StateByLong(long string) State
 ```
 
-#### func  StateByShort
+#### func StateByShort
 
 ```go
 func StateByShort(short string) State
 ```
 
-#### func  StateList
+#### func StateList
 
 ```go
 func StateList() []State
@@ -289,65 +293,69 @@ type ZipCode struct {
 
 ZipCode is a struct representing a zipcode, this is based on the USPS dataset.
 
-#### func  GetCityZips
+#### func GetCityZips
 
 ```go
 func GetCityZips(city string) []*ZipCode
 ```
+
 GetCityZips returns a slice of pointers to ZipCode structs associated with a
 city when given a city in string form. Data is loaded from the USPS dataset on
 first call and cached in memory.
 
-#### func  GetStateZips
+#### func GetStateZips
 
 ```go
 func GetStateZips(state string) []*ZipCode
 ```
+
 GetStateZips returns a slice of pointers to ZipCode structs associated with a
 state when given a state in string form. Data is loaded from the USPS dataset on
 first call and cached in memory.
 
-#### func  GetZipCode
+#### func GetZipCode
 
 ```go
 func GetZipCode(zip string) (*ZipCode, bool)
 ```
+
 GetZipCode returns a pointer to a ZipCode struct when given a zip code in string
 form. Data is loaded from the USPS dataset on first call and cached in memory.
 
-#### func  LookupAllZipCodesInString
+#### func LookupAllZipCodesInString
 
 ```go
 func LookupAllZipCodesInString(s string) ([]*ZipCode, bool)
 ```
 
-#### func  ZipExtract
+#### func ZipExtract
 
 ```go
 func ZipExtract(data string) []*ZipCode
 ```
+
 ZipExtract is just an adapter for LookupAllZipCodesInString to not break things,
 this was a duplicate function
 
-#### func (*ZipCode) Bytes
+#### func (\*ZipCode) Bytes
 
 ```go
 func (z *ZipCode) Bytes() []byte
 ```
 
-#### func (*ZipCode) MustMarshalJSON
+#### func (\*ZipCode) MustMarshalJSON
 
 ```go
 func (z *ZipCode) MustMarshalJSON() []byte
 ```
 
-#### func (*ZipCode) Pretty
+#### func (\*ZipCode) Pretty
 
 ```go
 func (z *ZipCode) Pretty() []byte
 ```
 
-#### func (*ZipCode) String
+#### func (\*ZipCode) String
 
 ```go
 func (z *ZipCode) String() string
