@@ -1,4 +1,5 @@
-/*
+/* [![GoDoc](https://godoc.org/github.com/yunginnanet/usps?status.svg)](https://pkg.go.dev/github.com/yunginnanet/usps) [![codecov](https://codecov.io/gh/yunginnanet/usps/graph/badge.svg?token=YbAagRnkvt)](https://codecov.io/gh/yunginnanet/usps)
+
 #### package usps is a U.S (phone number|state|area|zip) code toolkit.
 
 this toolkit is offline, and the datasets are mostly acquired from U.S. government, all data is compiled into the library.
@@ -7,7 +8,7 @@ because of this design choice, almost all functions end up executing in <100 nan
 
 ### limitations
 
-at this time, there is no methodology for updating the datasets, and they are bound to be inaccurate.
+at this time, there is no methodology for updating the datasets, and they are bound to become out of date, and may be incomplete.
 
 this should be used for ultra-fast assessment potentially pending further online data queries.
 

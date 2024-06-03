@@ -1,7 +1,7 @@
 # usps
 
-[![GoDoc](https://godoc.org/github.com/yunginnanet/usps?status.svg)](https://pkg.go.dev/github.com/yunginnanet/usps) [![codecov](https://codecov.io/gh/yunginnanet/usps/graph/badge.svg?token=YbAagRnkvt)](https://codecov.io/gh/yunginnanet/usps)
 
+    [![GoDoc](https://godoc.org/github.com/yunginnanet/usps?status.svg)](https://pkg.go.dev/github.com/yunginnanet/usps) [![codecov](https://codecov.io/gh/yunginnanet/usps/graph/badge.svg?token=YbAagRnkvt)](https://codecov.io/gh/yunginnanet/usps)
 #### package usps is a U.S (phone number|state|area|zip) code toolkit.
 
 this toolkit is offline, and the datasets are mostly acquired from U.S.
@@ -13,7 +13,7 @@ nano seconds. run the benchmarks yourself to see what I mean.
 ### limitations
 
 at this time, there is no methodology for updating the datasets, and they are
-bound to be inaccurate.
+bound to become out of date, and may be incomplete.
 
 this should be used for ultra-fast assessment potentially pending further online
 data queries.
