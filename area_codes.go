@@ -21,7 +21,7 @@ type AreaCode struct {
 }
 
 var (
-	areaCodeSetupOnce      = &sync.Once{}
+	areaCodeSetupOnce      = sync.Once{}
 	areaCodeToAreaCodes    = make(map[string][]*AreaCode)
 	intAreaCodeToAreaCodes = make(map[int][]*AreaCode)
 	intAreaCodeToState     = make(map[int]string)
@@ -37,7 +37,7 @@ func resetAllAreaCodes() {
 	areaCodeToState = make(map[string]string)
 	stateToAreaCodes = make(map[string][]*AreaCode)
 	cityToAreaCodes = make(map[string][]*AreaCode)
-	areaCodeSetupOnce = &sync.Once{}
+	areaCodeSetupOnce = sync.Once{}
 }
 
 var cleaner = strings.NewReplacer(
